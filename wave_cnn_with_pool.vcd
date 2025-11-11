@@ -1,0 +1,567 @@
+$date
+	Tue Nov 04 22:02:08 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_cnn_top_with_pool $end
+$var wire 1 ! out_valid $end
+$var wire 8 " out_data [7:0] $end
+$var parameter 32 # DATA_W $end
+$var parameter 32 $ FRAC $end
+$var parameter 32 % IMG_W $end
+$var reg 1 & clk $end
+$var reg 1 ' in_valid $end
+$var reg 8 ( pixel_in [7:0] $end
+$var reg 1 ) rst $end
+$scope module dut $end
+$var wire 1 & clk $end
+$var wire 1 ' in_valid $end
+$var wire 8 * pixel_in [7:0] $end
+$var wire 1 ) rst $end
+$var wire 1 + relu_out_valid $end
+$var wire 8 , relu_out_data [7:0] $end
+$var wire 1 - pool_out_valid $end
+$var wire 8 . pool_out_data [7:0] $end
+$var wire 8 / pb11 [7:0] $end
+$var wire 8 0 pb10 [7:0] $end
+$var wire 8 1 pb01 [7:0] $end
+$var wire 8 2 pb00 [7:0] $end
+$var wire 8 3 p22 [7:0] $end
+$var wire 8 4 p21 [7:0] $end
+$var wire 8 5 p20 [7:0] $end
+$var wire 8 6 p12 [7:0] $end
+$var wire 8 7 p11 [7:0] $end
+$var wire 8 8 p10 [7:0] $end
+$var wire 8 9 p02 [7:0] $end
+$var wire 8 : p01 [7:0] $end
+$var wire 8 ; p00 [7:0] $end
+$var wire 1 < lb_valid $end
+$var wire 1 = lb2_valid $end
+$var wire 1 > conv_out_valid $end
+$var wire 8 ? conv_out_data [7:0] $end
+$var wire 1 @ bn_out_valid $end
+$var wire 8 A bn_out_data [7:0] $end
+$var parameter 32 B DATA_W $end
+$var parameter 32 C FRAC $end
+$var parameter 32 D IMG_W $end
+$var reg 1 E bn_in_valid $end
+$var reg 1 F conv_in_valid $end
+$var reg 8 G out_data [7:0] $end
+$var reg 1 ! out_valid $end
+$var reg 1 H pool_in_valid $end
+$var reg 1 I relu_in_valid $end
+$scope module bn $end
+$var wire 1 & clk $end
+$var wire 1 E in_valid $end
+$var wire 1 ) rst $end
+$var wire 8 J in_data [7:0] $end
+$var parameter 32 K BETA $end
+$var parameter 32 L DATA_W $end
+$var parameter 32 M FRAC $end
+$var parameter 32 N GAMMA $end
+$var reg 16 O mult [15:0] $end
+$var reg 8 P out_data [7:0] $end
+$var reg 1 @ out_valid $end
+$var reg 16 Q res [15:0] $end
+$upscope $end
+$scope module conv $end
+$var wire 1 & clk $end
+$var wire 1 F in_valid $end
+$var wire 1 ) rst $end
+$var wire 8 R p22 [7:0] $end
+$var wire 8 S p21 [7:0] $end
+$var wire 8 T p20 [7:0] $end
+$var wire 8 U p12 [7:0] $end
+$var wire 8 V p11 [7:0] $end
+$var wire 8 W p10 [7:0] $end
+$var wire 8 X p02 [7:0] $end
+$var wire 8 Y p01 [7:0] $end
+$var wire 8 Z p00 [7:0] $end
+$var parameter 32 [ BIAS $end
+$var parameter 32 \ DATA_W $end
+$var parameter 32 ] FRAC $end
+$var parameter 32 ^ W00 $end
+$var parameter 32 _ W01 $end
+$var parameter 32 ` W02 $end
+$var parameter 32 a W10 $end
+$var parameter 32 b W11 $end
+$var parameter 32 c W12 $end
+$var parameter 32 d W20 $end
+$var parameter 32 e W21 $end
+$var parameter 32 f W22 $end
+$var reg 21 g acc [20:0] $end
+$var reg 8 h out_data [7:0] $end
+$var reg 1 > out_valid $end
+$var reg 16 i prod [15:0] $end
+$upscope $end
+$scope module lb $end
+$var wire 1 & clk $end
+$var wire 1 ' in_valid $end
+$var wire 8 j pixel_in [7:0] $end
+$var wire 1 ) rst $end
+$var parameter 32 k DATA_W $end
+$var parameter 32 l IMG_W $end
+$var reg 16 m col [15:0] $end
+$var reg 1 < out_valid $end
+$var reg 8 n p00 [7:0] $end
+$var reg 8 o p01 [7:0] $end
+$var reg 8 p p02 [7:0] $end
+$var reg 8 q p10 [7:0] $end
+$var reg 8 r p11 [7:0] $end
+$var reg 8 s p12 [7:0] $end
+$var reg 8 t p20 [7:0] $end
+$var reg 8 u p21 [7:0] $end
+$var reg 8 v p22 [7:0] $end
+$var integer 32 w i [31:0] $end
+$upscope $end
+$scope module lrelu $end
+$var wire 1 & clk $end
+$var wire 8 x in_data [7:0] $end
+$var wire 1 I in_valid $end
+$var wire 1 ) rst $end
+$var parameter 32 y A_DEN $end
+$var parameter 32 z A_NUM $end
+$var parameter 32 { DATA_W $end
+$var parameter 32 | FRAC $end
+$var reg 8 } out_data [7:0] $end
+$var reg 1 + out_valid $end
+$var reg 16 ~ prod [15:0] $end
+$var reg 16 !" scaled [15:0] $end
+$upscope $end
+$scope module pool $end
+$var wire 1 & clk $end
+$var wire 1 H in_valid $end
+$var wire 1 ) rst $end
+$var wire 8 "" p11 [7:0] $end
+$var wire 8 #" p10 [7:0] $end
+$var wire 8 $" p01 [7:0] $end
+$var wire 8 %" p00 [7:0] $end
+$var parameter 32 &" DATA_W $end
+$var reg 8 '" max1 [7:0] $end
+$var reg 8 (" max2 [7:0] $end
+$var reg 8 )" out_data [7:0] $end
+$var reg 1 - out_valid $end
+$upscope $end
+$scope module pool_lb $end
+$var wire 1 & clk $end
+$var wire 1 + in_valid $end
+$var wire 8 *" pixel_in [7:0] $end
+$var wire 1 ) rst $end
+$var parameter 32 +" DATA_W $end
+$var parameter 32 ," IMG_W $end
+$var reg 16 -" col [15:0] $end
+$var reg 1 = out_valid $end
+$var reg 8 ." p00 [7:0] $end
+$var reg 8 /" p01 [7:0] $end
+$var reg 8 0" p10 [7:0] $end
+$var reg 8 1" p11 [7:0] $end
+$var reg 1 2" row_valid $end
+$var integer 32 3" i [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 ,"
+b1000 +"
+b1000 &"
+b100 |
+b1000 {
+b1 z
+b100 y
+b100 l
+b1000 k
+b0 f
+b11111111111111111111111111110000 e
+b0 d
+b11111111111111111111111111110000 c
+b1000000 b
+b11111111111111111111111111110000 a
+b0 `
+b11111111111111111111111111110000 _
+b0 ^
+b100 ]
+b1000 \
+b0 [
+b11000 N
+b100 M
+b1000 L
+b100 K
+b100 D
+b100 C
+b1000 B
+b100 %
+b100 $
+b1000 #
+$end
+#0
+$dumpvars
+bx 3"
+x2"
+bx 1"
+bx 0"
+bx /"
+bx ."
+bx -"
+bx *"
+bx )"
+bx ("
+bx '"
+bx %"
+bx $"
+bx #"
+bx ""
+bx !"
+bx ~
+bx }
+bx x
+bx w
+bx v
+bx u
+bx t
+bx s
+bx r
+bx q
+bx p
+bx o
+bx n
+bx m
+b0 j
+bx i
+bx h
+bx g
+bx Z
+bx Y
+bx X
+bx W
+bx V
+bx U
+bx T
+bx S
+bx R
+bx Q
+bx P
+bx O
+bx J
+xI
+xH
+bx G
+xF
+xE
+bx A
+x@
+bx ?
+x>
+x=
+x<
+bx ;
+bx :
+bx 9
+bx 8
+bx 7
+bx 6
+bx 5
+bx 4
+bx 3
+bx 2
+bx 1
+bx 0
+bx /
+bx .
+x-
+bx ,
+x+
+b0 *
+1)
+b0 (
+0'
+0&
+bx "
+x!
+$end
+#5000
+b0 3
+b0 R
+b0 v
+b0 4
+b0 S
+b0 u
+b0 5
+b0 T
+b0 t
+b0 6
+b0 U
+b0 s
+b0 7
+b0 V
+b0 r
+b0 8
+b0 W
+b0 q
+b0 9
+b0 X
+b0 p
+b0 :
+b0 Y
+b0 o
+b0 ;
+b0 Z
+b0 n
+0<
+b0 m
+b0 ?
+b0 J
+b0 h
+0>
+0@
+b0 A
+b0 P
+b0 x
+0+
+b0 ,
+b0 }
+b0 *"
+0=
+b0 -"
+02"
+b0 ("
+b0 '"
+b0 .
+b0 )"
+0-
+b0 "
+b0 G
+0!
+0H
+0I
+0E
+0F
+b100 w
+b100 3"
+1&
+#10000
+0&
+#15000
+b100 3"
+b100 w
+1&
+#20000
+0&
+b1010 (
+b1010 *
+b1010 j
+1'
+0)
+#25000
+b1 m
+1&
+#30000
+0&
+b10100 (
+b10100 *
+b10100 j
+#35000
+b10 m
+1&
+#40000
+0&
+b11110 (
+b11110 *
+b11110 j
+#45000
+b11 m
+1<
+b10100 7
+b10100 V
+b10100 r
+b1010 8
+b1010 W
+b1010 q
+1&
+#50000
+0&
+b101000 (
+b101000 *
+b101000 j
+#55000
+1F
+b0 m
+b11110 7
+b11110 V
+b11110 r
+b10100 8
+b10100 W
+b10100 q
+1&
+#60000
+0&
+b110010 (
+b110010 *
+b110010 j
+#65000
+b1 m
+0<
+1>
+b1100100 ?
+b1100100 J
+b1100100 h
+b0 i
+b11001000000 g
+1&
+#70000
+0&
+b111100 (
+b111100 *
+b111100 j
+#75000
+1E
+0F
+b10 m
+b0 i
+b11001000000 g
+1&
+#80000
+0&
+b1000110 (
+b1000110 *
+b1000110 j
+#85000
+b11 m
+1<
+b11110 6
+b11110 U
+b11110 s
+b111100 7
+b111100 V
+b111100 r
+b110010 8
+b110010 W
+b110010 q
+b10100 :
+b10100 Y
+b10100 o
+b1010 ;
+b1010 Z
+b1010 n
+0>
+1@
+b10011010 A
+b10011010 P
+b10011010 x
+b10011010 Q
+b100101100000 O
+1&
+#90000
+0&
+b1010000 (
+b1010000 *
+b1010000 j
+#95000
+1I
+0E
+1F
+b0 m
+b101000 6
+b101000 U
+b101000 s
+b1000110 7
+b1000110 V
+b1000110 r
+b111100 8
+b111100 W
+b111100 q
+b11110 :
+b11110 Y
+b11110 o
+b10100 ;
+b10100 Z
+b10100 n
+1&
+#100000
+0&
+0'
+#105000
+0<
+1>
+b10010110 ?
+b10010110 J
+b10010110 h
+0@
+1+
+b11100110 ,
+b11100110 }
+b11100110 *"
+b0 i
+b100101100000 g
+b1111111111100110 !"
+b1111111110011010 ~
+1&
+#110000
+0&
+#115000
+0I
+1E
+0F
+b1 -"
+b0 i
+b100101100000 g
+1&
+#120000
+0&
+#125000
+0>
+1@
+b1100101 A
+b1100101 P
+b1100101 x
+0+
+b10 -"
+b1111111101100101 Q
+b1111011000010000 O
+1&
+#130000
+0&
+#135000
+1I
+0E
+1&
+#140000
+0&
+#145000
+0@
+1+
+b1100101 ,
+b1100101 }
+b1100101 *"
+1&
+#150000
+0&
+#155000
+0I
+b11 -"
+1&
+#160000
+0&
+#165000
+0+
+b100 -"
+1&
+#170000
+0&
+#175000
+1&
+#180000
+0&
+#185000
+1&
+#190000
+0&
+#195000
+1&
+#200000
+0&

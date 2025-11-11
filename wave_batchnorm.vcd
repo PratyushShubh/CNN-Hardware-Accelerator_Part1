@@ -1,0 +1,104 @@
+$date
+	Tue Nov 04 18:02:15 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_batchnorm $end
+$var wire 1 ! out_valid $end
+$var wire 8 " out_data [7:0] $end
+$var reg 1 # clk $end
+$var reg 8 $ in_data [7:0] $end
+$var reg 1 % in_valid $end
+$var reg 1 & rst $end
+$scope module dut $end
+$var wire 1 # clk $end
+$var wire 8 ' in_data [7:0] $end
+$var wire 1 % in_valid $end
+$var wire 1 & rst $end
+$var parameter 32 ( BETA $end
+$var parameter 32 ) DATA_W $end
+$var parameter 32 * FRAC $end
+$var parameter 32 + GAMMA $end
+$var reg 16 , mult [15:0] $end
+$var reg 8 - out_data [7:0] $end
+$var reg 1 ! out_valid $end
+$var reg 16 . res [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11000 +
+b100 *
+b1000 )
+b100 (
+$end
+#0
+$dumpvars
+bx .
+bx -
+bx ,
+b0 '
+1&
+0%
+b0 $
+0#
+bx "
+x!
+$end
+#5000
+0!
+b0 "
+b0 -
+1#
+#10000
+0#
+#15000
+1#
+#20000
+0#
+b10000 $
+b10000 '
+1%
+0&
+#25000
+1!
+b11100 "
+b11100 -
+b11100 .
+b110000000 ,
+1#
+#30000
+0#
+b11110000 $
+b11110000 '
+#35000
+b11101100 "
+b11101100 -
+b1111111111101100 .
+b1111111010000000 ,
+1#
+#40000
+0#
+0%
+#45000
+0!
+1#
+#50000
+0#
+#55000
+1#
+#60000
+0#
+#65000
+1#
+#70000
+0#
+#75000
+1#
+#80000
+0#

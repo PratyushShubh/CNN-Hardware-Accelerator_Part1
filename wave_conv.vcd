@@ -1,0 +1,166 @@
+$date
+	Tue Nov 04 18:16:56 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_conv3x3 $end
+$var wire 1 ! out_valid $end
+$var wire 8 " out_data [7:0] $end
+$var reg 1 # clk $end
+$var reg 1 $ in_valid $end
+$var reg 8 % p00 [7:0] $end
+$var reg 8 & p01 [7:0] $end
+$var reg 8 ' p02 [7:0] $end
+$var reg 8 ( p10 [7:0] $end
+$var reg 8 ) p11 [7:0] $end
+$var reg 8 * p12 [7:0] $end
+$var reg 8 + p20 [7:0] $end
+$var reg 8 , p21 [7:0] $end
+$var reg 8 - p22 [7:0] $end
+$var reg 1 . rst $end
+$scope module dut $end
+$var wire 1 # clk $end
+$var wire 1 $ in_valid $end
+$var wire 8 / p00 [7:0] $end
+$var wire 8 0 p01 [7:0] $end
+$var wire 8 1 p02 [7:0] $end
+$var wire 8 2 p10 [7:0] $end
+$var wire 8 3 p11 [7:0] $end
+$var wire 8 4 p12 [7:0] $end
+$var wire 8 5 p20 [7:0] $end
+$var wire 8 6 p21 [7:0] $end
+$var wire 8 7 p22 [7:0] $end
+$var wire 1 . rst $end
+$var parameter 32 8 BIAS $end
+$var parameter 32 9 DATA_W $end
+$var parameter 32 : FRAC $end
+$var parameter 32 ; W00 $end
+$var parameter 32 < W01 $end
+$var parameter 32 = W02 $end
+$var parameter 32 > W10 $end
+$var parameter 32 ? W11 $end
+$var parameter 32 @ W12 $end
+$var parameter 32 A W20 $end
+$var parameter 32 B W21 $end
+$var parameter 32 C W22 $end
+$var reg 21 D acc [20:0] $end
+$var reg 8 E out_data [7:0] $end
+$var reg 1 ! out_valid $end
+$var reg 16 F prod [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b0 C
+b11111111111111111111111111110000 B
+b0 A
+b11111111111111111111111111110000 @
+b1000000 ?
+b11111111111111111111111111110000 >
+b0 =
+b11111111111111111111111111110000 <
+b0 ;
+b100 :
+b1000 9
+b0 8
+$end
+#0
+$dumpvars
+bx F
+bx E
+bx D
+bx 7
+bx 6
+bx 5
+bx 4
+bx 3
+bx 2
+bx 1
+bx 0
+bx /
+1.
+bx -
+bx ,
+bx +
+bx *
+bx )
+bx (
+bx '
+bx &
+bx %
+0$
+0#
+bx "
+x!
+$end
+#5000
+b0 "
+b0 E
+0!
+1#
+#10000
+0#
+#15000
+1#
+#20000
+0#
+1$
+b10000 -
+b10000 7
+b10000 ,
+b10000 6
+b10000 +
+b10000 5
+b10000 *
+b10000 4
+b10000 )
+b10000 3
+b10000 (
+b10000 2
+b10000 '
+b10000 1
+b10000 &
+b10000 0
+b10000 %
+b10000 /
+0.
+#25000
+1!
+b0 F
+b0 D
+1#
+#30000
+0#
+b1000000 )
+b1000000 3
+#35000
+b11000000 "
+b11000000 E
+b110000000000 D
+b0 F
+1#
+#40000
+0#
+0$
+#45000
+0!
+1#
+#50000
+0#
+#55000
+1#
+#60000
+0#
+#65000
+1#
+#70000
+0#
+#75000
+1#
+#80000
+0#

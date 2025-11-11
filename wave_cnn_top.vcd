@@ -1,0 +1,493 @@
+$date
+	Tue Nov 04 18:35:23 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_cnn_top $end
+$var wire 1 ! out_valid $end
+$var wire 8 " out_data [7:0] $end
+$var parameter 32 # DATA_W $end
+$var parameter 32 $ FRAC $end
+$var parameter 32 % IMG_W $end
+$var reg 1 & clk $end
+$var reg 1 ' in_valid $end
+$var reg 8 ( pixel_in [7:0] $end
+$var reg 1 ) rst $end
+$scope module dut $end
+$var wire 1 & clk $end
+$var wire 1 ' in_valid $end
+$var wire 8 * pixel_in [7:0] $end
+$var wire 1 ) rst $end
+$var wire 1 + relu_out_valid $end
+$var wire 8 , relu_out_data [7:0] $end
+$var wire 8 - p22 [7:0] $end
+$var wire 8 . p21 [7:0] $end
+$var wire 8 / p20 [7:0] $end
+$var wire 8 0 p12 [7:0] $end
+$var wire 8 1 p11 [7:0] $end
+$var wire 8 2 p10 [7:0] $end
+$var wire 8 3 p02 [7:0] $end
+$var wire 8 4 p01 [7:0] $end
+$var wire 8 5 p00 [7:0] $end
+$var wire 1 6 lb_valid $end
+$var wire 1 7 conv_out_valid $end
+$var wire 8 8 conv_out_data [7:0] $end
+$var wire 1 9 bn_out_valid $end
+$var wire 8 : bn_out_data [7:0] $end
+$var parameter 32 ; DATA_W $end
+$var parameter 32 < FRAC $end
+$var parameter 32 = IMG_W $end
+$var reg 1 > bn_in_valid $end
+$var reg 1 ? conv_in_valid $end
+$var reg 8 @ out_data [7:0] $end
+$var reg 1 ! out_valid $end
+$var reg 1 A relu_in_valid $end
+$scope module bn $end
+$var wire 1 & clk $end
+$var wire 1 > in_valid $end
+$var wire 1 ) rst $end
+$var wire 8 B in_data [7:0] $end
+$var parameter 32 C BETA $end
+$var parameter 32 D DATA_W $end
+$var parameter 32 E FRAC $end
+$var parameter 32 F GAMMA $end
+$var reg 16 G mult [15:0] $end
+$var reg 8 H out_data [7:0] $end
+$var reg 1 9 out_valid $end
+$var reg 16 I res [15:0] $end
+$upscope $end
+$scope module conv $end
+$var wire 1 & clk $end
+$var wire 1 ? in_valid $end
+$var wire 1 ) rst $end
+$var wire 8 J p22 [7:0] $end
+$var wire 8 K p21 [7:0] $end
+$var wire 8 L p20 [7:0] $end
+$var wire 8 M p12 [7:0] $end
+$var wire 8 N p11 [7:0] $end
+$var wire 8 O p10 [7:0] $end
+$var wire 8 P p02 [7:0] $end
+$var wire 8 Q p01 [7:0] $end
+$var wire 8 R p00 [7:0] $end
+$var parameter 32 S BIAS $end
+$var parameter 32 T DATA_W $end
+$var parameter 32 U FRAC $end
+$var parameter 32 V W00 $end
+$var parameter 32 W W01 $end
+$var parameter 32 X W02 $end
+$var parameter 32 Y W10 $end
+$var parameter 32 Z W11 $end
+$var parameter 32 [ W12 $end
+$var parameter 32 \ W20 $end
+$var parameter 32 ] W21 $end
+$var parameter 32 ^ W22 $end
+$var reg 21 _ acc [20:0] $end
+$var reg 8 ` out_data [7:0] $end
+$var reg 1 7 out_valid $end
+$var reg 16 a prod [15:0] $end
+$upscope $end
+$scope module lb $end
+$var wire 1 & clk $end
+$var wire 1 ' in_valid $end
+$var wire 8 b pixel_in [7:0] $end
+$var wire 1 ) rst $end
+$var parameter 32 c DATA_W $end
+$var parameter 32 d IMG_W $end
+$var reg 16 e col [15:0] $end
+$var reg 1 6 out_valid $end
+$var reg 8 f p00 [7:0] $end
+$var reg 8 g p01 [7:0] $end
+$var reg 8 h p02 [7:0] $end
+$var reg 8 i p10 [7:0] $end
+$var reg 8 j p11 [7:0] $end
+$var reg 8 k p12 [7:0] $end
+$var reg 8 l p20 [7:0] $end
+$var reg 8 m p21 [7:0] $end
+$var reg 8 n p22 [7:0] $end
+$var integer 32 o i [31:0] $end
+$upscope $end
+$scope module lrelu $end
+$var wire 1 & clk $end
+$var wire 8 p in_data [7:0] $end
+$var wire 1 A in_valid $end
+$var wire 1 ) rst $end
+$var parameter 32 q A_DEN $end
+$var parameter 32 r A_NUM $end
+$var parameter 32 s DATA_W $end
+$var parameter 32 t FRAC $end
+$var reg 8 u out_data [7:0] $end
+$var reg 1 + out_valid $end
+$var reg 16 v prod [15:0] $end
+$var reg 16 w scaled [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 t
+b1000 s
+b1 r
+b100 q
+b100 d
+b1000 c
+b0 ^
+b11111111111111111111111111110000 ]
+b0 \
+b11111111111111111111111111110000 [
+b1000000 Z
+b11111111111111111111111111110000 Y
+b0 X
+b11111111111111111111111111110000 W
+b0 V
+b100 U
+b1000 T
+b0 S
+b11000 F
+b100 E
+b1000 D
+b100 C
+b100 =
+b100 <
+b1000 ;
+b100 %
+b100 $
+b1000 #
+$end
+#0
+$dumpvars
+bx w
+bx v
+bx u
+bx p
+bx o
+bx n
+bx m
+bx l
+bx k
+bx j
+bx i
+bx h
+bx g
+bx f
+bx e
+b0 b
+bx a
+bx `
+bx _
+bx R
+bx Q
+bx P
+bx O
+bx N
+bx M
+bx L
+bx K
+bx J
+bx I
+bx H
+bx G
+bx B
+xA
+bx @
+x?
+x>
+bx :
+x9
+bx 8
+x7
+x6
+bx 5
+bx 4
+bx 3
+bx 2
+bx 1
+bx 0
+bx /
+bx .
+bx -
+bx ,
+x+
+b0 *
+1)
+b0 (
+0'
+0&
+bx "
+x!
+$end
+#5000
+b0 -
+b0 J
+b0 n
+b0 .
+b0 K
+b0 m
+b0 /
+b0 L
+b0 l
+b0 0
+b0 M
+b0 k
+b0 1
+b0 N
+b0 j
+b0 2
+b0 O
+b0 i
+b0 3
+b0 P
+b0 h
+b0 4
+b0 Q
+b0 g
+b0 5
+b0 R
+b0 f
+06
+b0 e
+b0 8
+b0 B
+b0 `
+07
+09
+b0 :
+b0 H
+b0 p
+0+
+b0 ,
+b0 u
+b0 "
+b0 @
+0!
+0A
+0>
+0?
+b100 o
+1&
+#10000
+0&
+#15000
+b100 o
+1&
+#20000
+0&
+b1010 (
+b1010 *
+b1010 b
+1'
+0)
+#25000
+b1 e
+1&
+#30000
+0&
+b10100 (
+b10100 *
+b10100 b
+#35000
+b10 e
+1&
+#40000
+0&
+b11110 (
+b11110 *
+b11110 b
+#45000
+b11 e
+16
+b10100 1
+b10100 N
+b10100 j
+b1010 2
+b1010 O
+b1010 i
+1&
+#50000
+0&
+b101000 (
+b101000 *
+b101000 b
+#55000
+1?
+b0 e
+b11110 1
+b11110 N
+b11110 j
+b10100 2
+b10100 O
+b10100 i
+1&
+#60000
+0&
+b110010 (
+b110010 *
+b110010 b
+#65000
+b1 e
+06
+17
+b1100100 8
+b1100100 B
+b1100100 `
+b0 a
+b11001000000 _
+1&
+#70000
+0&
+b111100 (
+b111100 *
+b111100 b
+#75000
+1>
+0?
+b10 e
+b0 a
+b11001000000 _
+1&
+#80000
+0&
+b1000110 (
+b1000110 *
+b1000110 b
+#85000
+b11 e
+16
+b11110 0
+b11110 M
+b11110 k
+b111100 1
+b111100 N
+b111100 j
+b110010 2
+b110010 O
+b110010 i
+b10100 4
+b10100 Q
+b10100 g
+b1010 5
+b1010 R
+b1010 f
+07
+19
+b10011010 :
+b10011010 H
+b10011010 p
+b10011010 I
+b100101100000 G
+1&
+#90000
+0&
+b1010000 (
+b1010000 *
+b1010000 b
+#95000
+1A
+0>
+1?
+b0 e
+b101000 0
+b101000 M
+b101000 k
+b1000110 1
+b1000110 N
+b1000110 j
+b111100 2
+b111100 O
+b111100 i
+b11110 4
+b11110 Q
+b11110 g
+b10100 5
+b10100 R
+b10100 f
+1&
+#100000
+0&
+0'
+#105000
+06
+17
+b10010110 8
+b10010110 B
+b10010110 `
+09
+1+
+b11100110 ,
+b11100110 u
+b0 a
+b100101100000 _
+b1111111111100110 w
+b1111111110011010 v
+1&
+#110000
+0&
+#115000
+b11100110 "
+b11100110 @
+1!
+0A
+1>
+0?
+b0 a
+b100101100000 _
+1&
+#120000
+0&
+#125000
+07
+19
+b1100101 :
+b1100101 H
+b1100101 p
+0+
+b1111111101100101 I
+b1111011000010000 G
+1&
+#130000
+0&
+#135000
+0!
+1A
+0>
+1&
+#140000
+0&
+#145000
+09
+1+
+b1100101 ,
+b1100101 u
+1&
+#150000
+0&
+#155000
+b1100101 "
+b1100101 @
+1!
+0A
+1&
+#160000
+0&
+#165000
+0+
+1&
+#170000
+0&
+#175000
+0!
+1&
+#180000
+0&
+#185000
+1&
+#190000
+0&
+#195000
+1&
+#200000
+0&
